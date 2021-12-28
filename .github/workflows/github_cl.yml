@@ -1,0 +1,8 @@
+name: github_cl
+on: push
+jobs:
+	my-jobs:
+		runs-on: ubuntu-latest
+		steps:
+			- name: my-step
+			  run: make lint
