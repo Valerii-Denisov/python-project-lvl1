@@ -1,10 +1,10 @@
-name: github_cl
+name: githab_cl
 on: push
 jobs:
-  my-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: my-step
-        run:
-	      pip install poetry
-              make lint
+        my-job:
+                runs-on: ubuntu-latest
+                steps: 
+                        - name: my-step
+                          run:
+                                pip install poetry
+                                make lint
