@@ -6,3 +6,5 @@
 [![Github_CL](https://github.com/Valerii-Denisov/python-project-lvl1/actions/workflows/github_cl.yml/badge.svg)](https://github.com/Valerii-Denisov/python-project-lvl1/actions)
 
 <a href="https://asciinema.org/a/9gWS7ENv0tTA8JCrrBzGcEPwt" target="_blank"><img src="https://asciinema.org/a/9gWS7ENv0tTA8JCrrBzGcEPwt.svg" /></a>
+
+<a href="https://asciinema.org/a/mTV8Zs3pDNmstMDpY5jOrrucL" target="_blank"><img src="https://asciinema.org/a/mTV8Zs3pDNmstMDpY5jOrrucL.svg" /></a>
