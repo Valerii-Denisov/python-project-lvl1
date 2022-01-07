@@ -15,14 +15,14 @@ def correct_answer():
             cor_answer.
     """
     bound = (0, 3571)
-    num = randint(bound[0], bound[1])  # noqa: S311
+    num = randint(bound[0], bound[1])
     step_counter = 0
     for divider in range(2, num // 2 + 1):
         if num % divider == 0:
             step_counter += 1
     print('Question: {0}'.format(num))
     cor_answer = 'yes' if step_counter <= 0 else 'no'
-    return cor_answer  # noqa: WPS331
+    return cor_answer
 
 
 def user_answer():
@@ -33,4 +33,4 @@ def user_answer():
             u_answer.
     """
     u_answer = input('Your answer: ')
-    return u_answer  # noqa: WPS331
+    return u_answer

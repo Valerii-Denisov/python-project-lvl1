@@ -15,9 +15,9 @@ def correct_answer():
             cor_answer.
     """
     bound = [0, 100]
-    num1 = randint(bound[0], bound[1])  # noqa: S311
-    num2 = randint(bound[0], bound[1])  # noqa: S311
-    math_operator = choice(['+', '-', '*'])  # noqa: S311
+    num1 = randint(bound[0], bound[1])
+    num2 = randint(bound[0], bound[1])
+    math_operator = choice(['+', '-', '*'])
     print('Question: {0}{2}{1}'.format(num1, num2, math_operator))
     if math_operator == '+':
         cor_answer = num1 + num2
@@ -25,7 +25,7 @@ def correct_answer():
         cor_answer = num1 - num2
     else:
         cor_answer = num1 * num2
-    return str(cor_answer)  # noqa: WPS331
+    return str(cor_answer)
 
 
 def user_answer():
@@ -36,4 +36,4 @@ def user_answer():
             u_answer.
     """
     u_answer = input('Your answer: ')
-    return u_answer  # noqa: WPS331
+    return u_answer

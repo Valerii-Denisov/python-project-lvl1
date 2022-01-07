@@ -16,10 +16,10 @@ def correct_answer():
     """
     lower_bound = 0
     upper_bound = 1500
-    num = randint(lower_bound, upper_bound)  # noqa: S311
+    num = randint(lower_bound, upper_bound)
     print('Question: {0}'.format(num))
     cor_answer = 'yes' if num % 2 == 0 else 'no'
-    return cor_answer  # noqa: WPS331
+    return cor_answer
 
 
 def user_answer():
@@ -30,4 +30,4 @@ def user_answer():
             u_answer.
     """
     u_answer = input('Your answer: ')
-    return u_answer  # noqa: WPS331
+    return u_answer

@@ -16,16 +16,16 @@ def correct_answer():
     """
     array_length = 0
     array = []
-    element = randint(0, 1000)  # noqa: S311
-    step = randint(0, 100)  # noqa: S311
-    while array_length < randint(5, 10):  # noqa: S311
+    element = randint(0, 1000)
+    step = randint(0, 100)
+    while array_length < randint(5, 10):
         array.append(str(element))
         element += step
         array_length += 1
-    cor_answer = choice(array)  # noqa: S311
+    cor_answer = choice(array)
     array[array.index(cor_answer)] = '..'
     print('Question: {0}'.format(' '.join(array)))
-    return cor_answer  # noqa: WPS331
+    return cor_answer
 
 
 def user_answer():
@@ -36,4 +36,4 @@ def user_answer():
             u_answer.
     """
     u_answer = input('Your answer: ')
-    return u_answer  # noqa: WPS331
+    return u_answer
