@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """The main script of brain even game."""
 from brain_games import game_cycle
-from brain_games.games_logic import brain_even_logic
+from brain_games.games import brain_even_logic
 
 
 def main():
