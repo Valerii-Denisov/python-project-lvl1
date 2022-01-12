@@ -10,9 +10,7 @@ def main():
 
     Using function of game_cycle.py and brain_even_logic.py
     """
-    user_name = game_cycle.greet()
-    brain_even_logic.printing_rule()
-    game_cycle.game_cycle(brain_even_logic, user_name)
+    game_cycle.game_cycle(brain_even_logic)
 
 
 if __name__ == '__main__':
