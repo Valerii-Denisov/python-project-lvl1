@@ -16,8 +16,8 @@ def game_cycle(game_logic):
         print(game_logic.GAME_RULE)
     flag = 0
     while flag < 3:
-        correct_answer, question_string= game_logic.correct_answer()
-        print (question_string)
+        correct_answer, question_string = game_logic.correct_answer()
+        print(question_string)
         user_answer = input('Your answer: ')
         if correct_answer == user_answer:
             print('Correct!')

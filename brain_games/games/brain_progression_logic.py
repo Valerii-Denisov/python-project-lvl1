@@ -1,7 +1,6 @@
 """The module contains the rules of the game and its functions."""
 from random import choice, randint
 
-
 GAME_RULE = 'What number is missing in the progression?'
 
 
