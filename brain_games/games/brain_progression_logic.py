@@ -1,7 +1,7 @@
 """The module contains the rules of the game and its functions."""
 from random import choice, randint
 
-GAME_RULE = 'What number is missing in the progression?'
+RULE = 'What number is missing in the progression?'
 
 
 def correct_answer():
@@ -22,4 +22,4 @@ def correct_answer():
         array_length += 1
     cor_answer = choice(array)
     array[array.index(cor_answer)] = '..'
-    return (cor_answer, 'Question: {0}'.format(' '.join(array)))
+    return cor_answer, ' '.join(array)
