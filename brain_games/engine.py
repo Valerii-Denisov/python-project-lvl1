@@ -13,7 +13,7 @@ def game_cycle(game_logic):
     user_name = prompt.string('May I have your name? ')
     if user_name:
         print('Hello, {0}!'.format(user_name))
-        print(game_logic.GAME_RULE)
+        print(game_logic.RULE)
     flag = 0
     while flag < 3:
         correct_answer, question_string = game_logic.correct_answer()
