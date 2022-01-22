@@ -22,4 +22,4 @@ def correct_answer():
         cor_answer = num1 - num2
     else:
         cor_answer = num1 * num2
-    return str(cor_answer), '{0} {2} {1}'.format(num1, num2, math_operator)
+    return str(cor_answer),'{0} {2} {1}'.format(num1, num2, math_operator)
