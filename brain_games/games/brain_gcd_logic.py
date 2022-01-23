@@ -5,7 +5,16 @@ RULE = 'Find the greatest common divisor of given numbers.'
 
 
 def get_gcd(number_one, number_two):
+    """
+    Calculate the greatest common divisor.
 
+    Parameters:
+        number_one: int,
+        number_two: int
+
+    Returns:
+        greatest common divisor.
+    """
     while number_one != 0 and number_two != 0:
         if number_one > number_two:
             number_one %= number_two
