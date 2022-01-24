@@ -8,9 +8,9 @@ def main():
     """
     Run game.
 
-    Using function of game_cycle.py and brain_even_logic.py
+    Using function of engine.py and calc.py
     """
-    engine.game_cycle(brain_calc_logic)
+    engine.start_game_cycle(brain_calc_logic)
 
 
 if __name__ == '__main__':

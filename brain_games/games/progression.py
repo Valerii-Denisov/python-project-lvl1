@@ -42,7 +42,7 @@ def get_progression_string(array):
     return ' '.join(array)
 
 
-def correct_answer():
+def get_correct_answer():
     """
     Generate question number and return correct answer.
 

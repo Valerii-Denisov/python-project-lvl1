@@ -2,6 +2,7 @@
 from random import randint
 
 RULE = "Answer 'yes' if the number is prime, otherwise answer 'no'."
+BOUND = (0, 3571)
 
 
 def check_prime(number):
@@ -20,7 +21,7 @@ def check_prime(number):
             return False
 
 
-def correct_answer():
+def get_correct_answer():
     """
     Generate question number and return correct answer.
 
@@ -28,7 +29,6 @@ def correct_answer():
             cor_answer,
             question_string.
     """
-    bound = (0, 3571)
-    num = randint(bound[0], bound[1])
+    num = randint(BOUND[0], BOUND[1])
     cor_answer = 'yes' if check_prime(num) else 'no'
     return cor_answer, num

@@ -2,6 +2,7 @@
 from random import randint
 
 RULE = 'Find the greatest common divisor of given numbers.'
+BOUND = (0, 100)
 
 
 def get_gcd(number_one, number_two):
@@ -23,7 +24,7 @@ def get_gcd(number_one, number_two):
     return number_one + number_two
 
 
-def correct_answer():
+def get_correct_answer():
     """
     Generate question number and return correct answer.
 
@@ -31,8 +32,7 @@ def correct_answer():
             cor_answer,
             question_string.
     """
-    bound = (0, 100)
-    num1 = randint(bound[0], bound[1])
-    num2 = randint(bound[0], bound[1])
+    num1 = randint(BOUND[0], BOUND[1])
+    num2 = randint(BOUND[0], BOUND[1])
     quest_number = get_gcd(num1, num2)
     return str(quest_number), '{0} {1}'.format(num1, num2)

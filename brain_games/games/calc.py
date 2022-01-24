@@ -2,9 +2,10 @@
 from random import choice, randint
 
 RULE = 'What is the result of the expression?'
+BOUND = (0, 100)
 
 
-def correct_answer():
+def get_correct_answer():
     """
     Generate question number and return correct answer.
 
@@ -12,9 +13,8 @@ def correct_answer():
             cor_answer,
             question_string.
     """
-    bound = (0, 100)
-    num1 = randint(bound[0], bound[1])
-    num2 = randint(bound[0], bound[1])
+    num1 = randint(BOUND[0], BOUND[1])
+    num2 = randint(BOUND[0], BOUND[1])
     math_operator = choice(['+', '-', '*'])
     if math_operator == '+':
         cor_answer = num1 + num2

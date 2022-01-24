@@ -2,7 +2,7 @@
 import prompt
 
 
-def game_cycle(game_logic):
+def start_game_cycle(game):
     """
     Run main cycle of game.
 
@@ -13,10 +13,10 @@ def game_cycle(game_logic):
     user_name = prompt.string('May I have your name? ')
     if user_name:
         print('Hello, {0}!'.format(user_name))
-        print(game_logic.RULE)
+        print(game.RULE)
     flag = 0
     while flag < 3:
-        correct_answer, question_string = game_logic.correct_answer()
+        correct_answer, question_string = game.get_correct_answer()
         print('Question: {0}'.format(question_string))
         user_answer = input('Your answer: ')
         if correct_answer == user_answer:

@@ -2,6 +2,7 @@
 from random import randint
 
 RULE = "Answer 'yes' if the number is even, otherwise answer 'no'."
+BOUND = (0, 1500)
 
 
 def check_even(number):
@@ -18,7 +19,7 @@ def check_even(number):
         return True
 
 
-def correct_answer():
+def get_correct_answer():
     """
     Generate question number and return correct answer.
 
@@ -26,7 +27,6 @@ def correct_answer():
             cor_answer,
             question_string.
     """
-    bound = (0, 1500)
-    num = randint(bound[0], bound[1])
+    num = randint(BOUND[0], BOUND[1])
     cor_answer = 'yes' if check_even(num) else 'no'
     return cor_answer, num
