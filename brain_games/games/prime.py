@@ -19,6 +19,7 @@ def check_prime(number):
     for divider in range(2, number // 2 + 1):
         if number % divider == 0:
             return False
+    return True
 
 
 def get_game_data():
