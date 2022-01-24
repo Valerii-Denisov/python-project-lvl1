@@ -19,7 +19,7 @@ def check_even(number):
         return True
 
 
-def get_correct_answer():
+def get_game_data():
     """
     Generate question number and return correct answer.
 

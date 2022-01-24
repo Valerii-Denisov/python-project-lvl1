@@ -24,7 +24,7 @@ def get_gcd(number_one, number_two):
     return number_one + number_two
 
 
-def get_correct_answer():
+def get_game_data():
     """
     Generate question number and return correct answer.
 

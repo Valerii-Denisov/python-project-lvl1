@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """The main script of brain even game."""
 from brain_games import engine
-from brain_games.games import brain_gcd_logic
+from brain_games.games import gcd
 
 
 def main():
@@ -10,7 +10,7 @@ def main():
 
     Using function of game_cycle.py and brain_gcd_logic.py
     """
-    engine.start_game_cycle(brain_gcd_logic)
+    engine.start_game(gcd)
 
 
 if __name__ == '__main__':

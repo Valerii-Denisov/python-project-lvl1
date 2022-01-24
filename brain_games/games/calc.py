@@ -5,7 +5,7 @@ RULE = 'What is the result of the expression?'
 BOUND = (0, 100)
 
 
-def get_correct_answer():
+def get_game_data():
     """
     Generate question number and return correct answer.
 

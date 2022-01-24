@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """The main script of brain even game."""
 from brain_games import engine
-from brain_games.games import brain_calc_logic
+from brain_games.games import calc
 
 
 def main():
@@ -10,7 +10,7 @@ def main():
 
     Using function of engine.py and calc.py
     """
-    engine.start_game_cycle(brain_calc_logic)
+    engine.start_game(calc)
 
 
 if __name__ == '__main__':

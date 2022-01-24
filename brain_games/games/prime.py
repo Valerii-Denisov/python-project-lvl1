@@ -21,7 +21,7 @@ def check_prime(number):
             return False
 
 
-def get_correct_answer():
+def get_game_data():
     """
     Generate question number and return correct answer.
 
