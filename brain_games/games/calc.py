@@ -1,7 +1,7 @@
 """The module contains the rules of the game and its functions."""
 from random import choice, randint
 
-RULE = 'What is the result of the expression?'
+RULES = 'What is the result of the expression?'
 BOUND = (0, 100)
 
 

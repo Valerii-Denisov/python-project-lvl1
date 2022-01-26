@@ -1,7 +1,7 @@
 """The module contains the rules of the game and its functions."""
 from random import randint
 
-RULE = "Answer 'yes' if the number is prime, otherwise answer 'no'."
+RULES = "Answer 'yes' if the number is prime, otherwise answer 'no'."
 BOUND = (0, 3571)
 
 

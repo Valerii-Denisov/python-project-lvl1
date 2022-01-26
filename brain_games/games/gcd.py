@@ -1,7 +1,7 @@
 """The module contains the rules of the game and its functions."""
 from random import randint
 
-RULE = 'Find the greatest common divisor of given numbers.'
+RULES = 'Find the greatest common divisor of given numbers.'
 BOUND = (0, 100)
 
 

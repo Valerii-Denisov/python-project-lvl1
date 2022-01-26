@@ -1,7 +1,7 @@
 """The module contains the rules of the game and its functions."""
 from random import choice, randint
 
-RULE = 'What number is missing in the progression?'
+RULES = 'What number is missing in the progression?'
 DIFFERENCE_BORDER = (0, 100)
 PROGRESSION_LENGTH_BORDER = (5, 10)
 INITIAL_TERM_BORDER = (0, 1000)

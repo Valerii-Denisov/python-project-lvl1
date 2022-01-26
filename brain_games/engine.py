@@ -1,6 +1,8 @@
 """The module contains the basic logic of game execution."""
 import prompt
 
+ROUNDS_COUNT = 3
+
 
 def start_game(game):
     """
@@ -13,8 +15,8 @@ def start_game(game):
     user_name = prompt.string('May I have your name? ')
     if user_name:
         print('Hello, {0}!'.format(user_name))
-        print(game.RULE)
-    for _ in range(3):
+        print(game.RULES)
+    for _ in range(ROUNDS_COUNT):
         correct_answer, question_string = game.get_game_data()
         print('Question: {0}'.format(question_string))
         user_answer = input('Your answer: ')
