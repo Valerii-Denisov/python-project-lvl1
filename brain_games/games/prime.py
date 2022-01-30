@@ -2,10 +2,10 @@
 from random import randint
 
 RULES = "Answer 'yes' if the number is prime, otherwise answer 'no'."
-BOUND = (0, 3571)
+BOUNDS = (0, 3571)
 
 
-def check_prime(number):
+def is_prime(number):
     """
     Check whether a number is prime.
 
@@ -30,6 +30,6 @@ def get_game_data():
             cor_answer,
             question_string.
     """
-    num = randint(BOUND[0], BOUND[1])
-    cor_answer = 'yes' if check_prime(num) else 'no'
+    num = randint(*BOUNDS)
+    cor_answer = 'yes' if is_prime(num) else 'no'
     return cor_answer, num

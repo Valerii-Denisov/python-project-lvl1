@@ -4,7 +4,7 @@ import prompt
 ROUNDS_COUNT = 3
 
 
-def start_game(game):
+def run_game(game):
     """
     Run main cycle of game.
 

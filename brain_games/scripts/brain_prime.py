@@ -10,7 +10,7 @@ def main():
 
     Using function of game_cycle.py and brain_prime_logic.py
     """
-    engine.start_game(prime)
+    engine.run_game(prime)
 
 
 if __name__ == '__main__':

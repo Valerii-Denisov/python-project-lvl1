@@ -1,5 +1,5 @@
 """The module contains the rules of the game and its functions."""
-from random import choice, randint
+from random import randint
 
 RULES = 'What number is missing in the progression?'
 DIFFERENCE_BORDER = (0, 100)
@@ -7,39 +7,38 @@ PROGRESSION_LENGTH_BORDER = (5, 10)
 INITIAL_TERM_BORDER = (0, 1000)
 
 
-def get_array():
+def get_progression(initial_term, difference, max_array_length):
     """
-    Generate array.
+    Generate progression.
+
+    Parameters:
+        difference: tuple
+        initial_term: tuple
+        max_array_length: tuple
 
     Returns:
-            array.
+            progression.
     """
-    array_length = 0
-    array = []
-    initial_term = randint(INITIAL_TERM_BORDER[0], INITIAL_TERM_BORDER[1])
-    difference = randint(DIFFERENCE_BORDER[0], DIFFERENCE_BORDER[1])
-    max_array_length = randint(
-        PROGRESSION_LENGTH_BORDER[0],
-        PROGRESSION_LENGTH_BORDER[1],
-    )
-    while array_length < max_array_length:
-        array.append(str(initial_term))
+    progression_length = 0
+    progression = []
+    while progression_length < max_array_length:
+        progression.append(str(initial_term))
         initial_term += difference
-        array_length += 1
-    return array
+        progression_length += 1
+    return progression
 
 
-def get_progression_string(array):
+def stringify_progression(progression):
     """
     Turn a progression into a string.
 
     Parameters:
-        array: list
+        progression: list
 
     Returns:
             string.
     """
-    return ' '.join(array)
+    return ' '.join(progression)
 
 
 def get_game_data():
@@ -50,7 +49,16 @@ def get_game_data():
             cor_answer,
             question_string.
     """
-    array = get_array()
-    cor_answer = choice(array)
-    array[array.index(cor_answer)] = '..'
-    return cor_answer, get_progression_string(array)
+    progression_parameters = (
+        randint(*INITIAL_TERM_BORDER),
+        randint(*DIFFERENCE_BORDER),
+        randint(*PROGRESSION_LENGTH_BORDER),
+    )
+    progression = get_progression(*progression_parameters)
+    cor_answer_index = randint(0, progression_parameters[2])
+    question_progression = progression[:]
+    question_progression[cor_answer_index] = '..'
+    return (
+        progression[cor_answer_index],
+        stringify_progression(question_progression),
+    )

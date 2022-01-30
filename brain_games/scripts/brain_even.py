@@ -10,7 +10,7 @@ def main():
 
     Using function of game_cycle.py and brain_even_logic.py
     """
-    engine.start_game(even)
+    engine.run_game(even)
 
 
 if __name__ == '__main__':

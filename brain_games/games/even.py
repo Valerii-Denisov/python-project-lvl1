@@ -2,10 +2,10 @@
 from random import randint
 
 RULES = "Answer 'yes' if the number is even, otherwise answer 'no'."
-BOUND = (0, 1500)
+BOUNDS = (0, 1500)
 
 
-def check_even(number):
+def is_even(number):
     """
     Check whether a number is even.
 
@@ -13,10 +13,9 @@ def check_even(number):
         number: int
 
     Returns:
-            True.
+            True or False.
     """
-    if number % 2 == 0:
-        return True
+    return number % 2 == 0
 
 
 def get_game_data():
@@ -27,6 +26,6 @@ def get_game_data():
             cor_answer,
             question_string.
     """
-    num = randint(BOUND[0], BOUND[1])
-    cor_answer = 'yes' if check_even(num) else 'no'
+    num = randint(*BOUNDS)
+    cor_answer = 'yes' if is_even(num) else 'no'
     return cor_answer, num

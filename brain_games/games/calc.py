@@ -2,7 +2,7 @@
 from random import choice, randint
 
 RULES = 'What is the result of the expression?'
-BOUND = (0, 100)
+BOUNDS = (0, 100)
 
 
 def get_game_data():
@@ -13,8 +13,8 @@ def get_game_data():
             cor_answer,
             question_string.
     """
-    num1 = randint(BOUND[0], BOUND[1])
-    num2 = randint(BOUND[0], BOUND[1])
+    num1 = randint(*BOUNDS)
+    num2 = randint(*BOUNDS)
     math_operator = choice(['+', '-', '*'])
     if math_operator == '+':
         cor_answer = num1 + num2

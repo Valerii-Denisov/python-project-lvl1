@@ -10,7 +10,7 @@ def main():
 
     Using function of engine.py and calc.py
     """
-    engine.start_game(calc)
+    engine.run_game(calc)
 
 
 if __name__ == '__main__':
