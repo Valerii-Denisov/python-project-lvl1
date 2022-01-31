@@ -1,5 +1,5 @@
 """The module contains the rules of the game and its functions."""
-from random import randint
+from random import choice, randint
 
 RULES = 'What number is missing in the progression?'
 DIFFERENCE_BORDER = (0, 100)
@@ -30,7 +30,7 @@ def get_progression(initial_term, difference, max_array_length):
 
 def stringify_progression(progression):
     """
-    Turn a progression into a string.
+    Turn a question progression into a string.
 
     Parameters:
         progression: list
@@ -55,7 +55,7 @@ def get_game_data():
         randint(*PROGRESSION_LENGTH_BORDER),
     )
     progression = get_progression(*progression_parameters)
-    cor_answer_index = randint(0, progression_parameters[2])
+    cor_answer_index = choice(range(progression_parameters[2]))
     question_progression = progression[:]
     question_progression[cor_answer_index] = '..'
     return (
