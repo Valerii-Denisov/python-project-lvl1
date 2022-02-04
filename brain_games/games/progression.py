@@ -28,17 +28,22 @@ def get_progression(initial_term, difference, max_array_length):
     return progression
 
 
-def stringify_progression(progression):
+def stringify_progression(progression, hidden_term_index):
     """
-    Turn a question progression into a string.
+    Take the progression and index of the hidden element.
+
+    Generate and return the question string.
 
     Parameters:
-        progression: list
+        progression: list,
+        hidden_term_index: int
 
     Returns:
             string.
     """
-    return ' '.join(progression)
+    question_progression = progression[:]
+    question_progression[hidden_term_index] = '..'
+    return ' '.join(question_progression)
 
 
 def get_game_data():
@@ -49,16 +54,12 @@ def get_game_data():
             cor_answer,
             question_string.
     """
-    progression_parameters = (
-        randint(*INITIAL_TERM_BORDER),
-        randint(*DIFFERENCE_BORDER),
-        randint(*PROGRESSION_LENGTH_BORDER),
-    )
-    progression = get_progression(*progression_parameters)
-    cor_answer_index = choice(range(progression_parameters[2]))
-    question_progression = progression[:]
-    question_progression[cor_answer_index] = '..'
+    initial_term = randint(*INITIAL_TERM_BORDER)
+    difference = randint(*DIFFERENCE_BORDER)
+    max_array_length = randint(*PROGRESSION_LENGTH_BORDER)
+    progression = get_progression(initial_term, difference, max_array_length)
+    hidden_term_index = choice(range(max_array_length))
     return (
-        progression[cor_answer_index],
-        stringify_progression(question_progression),
+        progression[hidden_term_index],
+        stringify_progression(progression, hidden_term_index),
     )
